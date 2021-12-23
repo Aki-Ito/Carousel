@@ -30,6 +30,16 @@ class CarouselView: UICollectionView {
         self.register(CarouselCell.self, forCellWithReuseIdentifier: cellIdentifier)
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        let cells = self.visibleCells
+        for cell in cells{
+            transformScale(cell: cell)
+        }
+        
+    }
+    
     convenience init(frame: CGRect){
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 200, height: frame.height/2)
@@ -46,6 +56,18 @@ class CarouselView: UICollectionView {
         // Drawing code
     }
     */
+    
+    func transformScale(cell: UICollectionViewCell){
+        //計算してスケールを変更する
+        let cellCenter: CGPoint = self.convert(cell.center, to: nil)
+        let screenCenterX: CGFloat = UIScreen.main.bounds.width/2
+        let reductionRatio: CGFloat = -0.0009
+        let maxScale: CGFloat = 1
+        //中心までの距離
+        let cellCenterDisX: CGFloat = abs(screenCenterX - cellCenter.x)
+        let newScale = reductionRatio*cellCenterDisX + maxScale
+        cell.transform = CGAffineTransform(scaleX: newScale, y: newScale)
+    }
 
 }
 
@@ -78,7 +100,7 @@ extension CarouselView: UIScrollViewDelegate{
             if cellItemsWidth == 0.0{
                 cellItemsWidth = floor(scrollView.contentSize.width/3.0)
             }
-            
+
             if (scrollView.contentOffset.x <= 0.0) || (scrollView.contentOffset.x > cellItemsWidth*2.0){
                 scrollView.contentOffset.x = cellItemsWidth
             }
