@@ -22,6 +22,12 @@ class ViewController: UIViewController {
         carouselView.center = CGPoint(x: width/2, y: height/2)
         self.view.addSubview(carouselView)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        carouselView.scrollToFirstItem()
+    }
 
 
 }

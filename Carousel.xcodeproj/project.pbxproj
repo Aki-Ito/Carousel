@@ -17,6 +17,7 @@
 		2C9896702774587F00AF4764 /* CarouselUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98966F2774587F00AF4764 /* CarouselUITestsLaunchTests.swift */; };
 		2C98967D277458B700AF4764 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98967C277458B700AF4764 /* CarouselView.swift */; };
 		2C989681277468C300AF4764 /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C989680277468C300AF4764 /* CarouselCell.swift */; };
+		2C9896832774AB9500AF4764 /* PerCellPadingFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9896822774AB9500AF4764 /* PerCellPadingFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2C98966F2774587F00AF4764 /* CarouselUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2C98967C277458B700AF4764 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		2C989680277468C300AF4764 /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
+		2C9896822774AB9500AF4764 /* PerCellPadingFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerCellPadingFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				2C98965A2774587E00AF4764 /* Info.plist */,
 				2C98967C277458B700AF4764 /* CarouselView.swift */,
 				2C989680277468C300AF4764 /* CarouselCell.swift */,
+				2C9896822774AB9500AF4764 /* PerCellPadingFlowLayout.swift */,
 			);
 			path = Carousel;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				2C98964D2774587B00AF4764 /* AppDelegate.swift in Sources */,
 				2C98967D277458B700AF4764 /* CarouselView.swift in Sources */,
 				2C98964F2774587B00AF4764 /* SceneDelegate.swift in Sources */,
+				2C9896832774AB9500AF4764 /* PerCellPadingFlowLayout.swift in Sources */,
 				2C989681277468C300AF4764 /* CarouselCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
